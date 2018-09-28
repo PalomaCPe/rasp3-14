@@ -1,0 +1,39 @@
+1- humidade: 
+install
+    npm i homebridge-humidity-sensor
+config.json
+    {
+        "accessory": "Humidity Sensor",
+        "name": "Pi Humidity Sensor",
+        "pin": 4
+    }
+
+2- porta
+install 
+    npm i homebridge-doorsensor
+config.json
+    {
+        "accessory": "DoorSensor",
+        "name": "Garage Door",
+        "sensorPollInMs": 5000,
+        "flipBehavior": false,
+        "sensorPin": 18,         /* sensorPin or triggerFile required */
+        "triggerFile": "file"    /* but not both */
+    }
+
+
+
+"accessories": [
+        {
+            "accessory": "Humidity Sensor",
+            "name": "Pi Humidity Sensor",
+            "pin": 4
+        },
+        {
+            "accessory": "DoorSensor",
+            "name": "Garage Door",
+            "sensorPollInMs": 5000,
+            "flipBehavior": false,
+            "sensorPin": 18
+        }
+    ],
